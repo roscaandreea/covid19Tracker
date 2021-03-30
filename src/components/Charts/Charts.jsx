@@ -3,7 +3,7 @@ import {fetchDailyData} from '../../api';
 import {Line, Bar } from 'react-chartjs-2';
 import styles from './Charts.module.css';
 
-const Charts = () =>{
+const Charts = ({data, country }) =>{
     const [dailyData, setDailyData]= useState([]);
     useEffect(() =>{
         const fetchApi = async() =>{
