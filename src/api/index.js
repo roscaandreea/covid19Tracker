@@ -37,17 +37,10 @@ export const fetchDailyData = async() => {
 }
 
 export const fetchCountries = async() => {
-<<<<<<< HEAD
     try {
         const { data: { countries }} = await axios.get(`${url}/countries`);
         return countries.map((country) => country.name);
     } catch(err){
-=======
-    try{
-        const {data: { countries }} = await axios.get(`${url}/countries`);
-        return countries.map((country) => country.name);
-    } catch(err) {
->>>>>>> 1a23a10d29ecb9c80edb4374654554305299f558
         console.log(err);
     }
 }
