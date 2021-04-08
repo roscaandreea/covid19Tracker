@@ -10,8 +10,8 @@ body{
 }
 
 .image{
-    width: 370px;
-    margin-top: 20px;
+    width: 300px;
+    margin-top: 10px;
 }
 
 @media (max-width: 770px){

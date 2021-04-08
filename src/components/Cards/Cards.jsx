@@ -46,9 +46,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) =>{
                     </CardContent>
                 </Grid>
                 {/* End section */}
-
             </Grid>
-
         </div>
     );
 }
