@@ -19,6 +19,33 @@
     border-bottom: 10px solid #ef553b;
 }
 
+.itemCard{
+    font-size: 25px !important;
+    font-weight: bold !important;
+    text-align: center;
+}
+
+.infectCounter{
+    font-size: 33px;
+    font-weight: bold;
+    align-items: center !important;
+    color: #636efa;
+}
+
+.recCounter{
+    font-size: 35px;
+    font-weight: bold;
+    align-items: center !important;
+    color: #03cc96;
+}
+
+.deathCounter{
+    font-size: 35px;
+    font-weight: bold;
+    align-items: center !important;
+    color: #ef553b;
+}
+
 @media (max-width: 770px){
     .card{
         margin: 2% 0 !important;
