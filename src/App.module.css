@@ -12,8 +12,22 @@ body{
 .image{
     width: 300px;
     margin-top: 10px;
+    align-items: start;
 }
 
+.dateTime{
+    font-weight: bold !important;
+    text-align: center !important;
+}
+
+.textDate{
+    text-align: center !important;
+}
+
+.card{
+    margin:0 2% !important;
+    margin-top: 70px !important;
+}
 @media (max-width: 770px){
     .container{
         margin: 0 10%;

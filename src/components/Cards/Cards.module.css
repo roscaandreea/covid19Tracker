@@ -30,6 +30,7 @@
     font-weight: bold;
     align-items: center !important;
     color: #636efa;
+    overflow-wrap: break-word;
 }
 
 .recCounter{
@@ -37,6 +38,7 @@
     font-weight: bold;
     align-items: center !important;
     color: #03cc96;
+    overflow-wrap: break-word;
 }
 
 .deathCounter{
@@ -44,6 +46,20 @@
     font-weight: bold;
     align-items: center !important;
     color: #ef553b;
+    overflow-wrap: break-word;
+}
+
+.textContent{
+    text-align: center !important;
+}
+
+.dateTime{
+    font-weight: bold !important;
+    text-align: center !important;
+}
+
+.textDate{
+    text-align: center !important;
 }
 
 @media (max-width: 770px){

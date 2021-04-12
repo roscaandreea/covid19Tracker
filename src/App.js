@@ -3,6 +3,7 @@ import { Cards, Charts, CountryPicker } from './components';
 import { fetchData } from './api';
 import styles from './App.module.css';
 import covidImage from './images/image.png';
+import  {Card, CardContent, Typography, Grid } from '@material-ui/core';
 
 
 class App extends React.Component{
@@ -29,9 +30,17 @@ class App extends React.Component{
       return(
           <div className={styles.container}>
               <img className={styles.image} src={covidImage} alt="covid-19" />
+                <h1>current status</h1>
               <Cards data={data}/>
               <CountryPicker handleCountryChange={ this.handleCountryChange }/>
               <Charts data={ data } country={ country } />
+              <Grid item component={Card} sx={12} className={styles.card}>
+                    <CardContent>
+                        <Typography className={styles.textDate} varian="body2">Last Updated at:</Typography>
+                        <Typography className={styles.dateTime} color="textSecondary">{new Date().toLocaleString()}</Typography>
+                        
+                    </CardContent>
+                </Grid>
           </div>
       );
   }
