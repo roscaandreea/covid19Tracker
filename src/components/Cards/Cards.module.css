@@ -26,7 +26,7 @@
 }
 
 .infectCounter{
-    font-size: 33px;
+    font-size: 35px;
     font-weight: bold;
     align-items: center !important;
     color: #636efa;
@@ -53,14 +53,6 @@
     text-align: center !important;
 }
 
-.dateTime{
-    font-weight: bold !important;
-    text-align: center !important;
-}
-
-.textDate{
-    text-align: center !important;
-}
 
 @media (max-width: 770px){
     .card{

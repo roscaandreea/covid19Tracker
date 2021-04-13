@@ -28,6 +28,8 @@ body{
     margin:0 2% !important;
     margin-top: 70px !important;
 }
+
+
 @media (max-width: 770px){
     .container{
         margin: 0 10%;

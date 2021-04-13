@@ -11,6 +11,7 @@ class App extends React.Component{
         data: {},
         country: ''
     }
+
     async componentDidMount(){
         const fetchedData = await fetchData();
         this.setState({data: fetchedData});
@@ -30,17 +31,16 @@ class App extends React.Component{
       return(
           <div className={styles.container}>
               <img className={styles.image} src={covidImage} alt="covid-19" />
-                <h1>current status</h1>
+                <h1 className={styles.title}>current status</h1>
               <Cards data={data}/>
               <CountryPicker handleCountryChange={ this.handleCountryChange }/>
               <Charts data={ data } country={ country } />
-              <Grid item component={Card} sx={12} className={styles.card}>
+              <Grid item  xs={12} className={styles.card}>
                     <CardContent>
                         <Typography className={styles.textDate} varian="body2">Last Updated at:</Typography>
-                        <Typography className={styles.dateTime} color="textSecondary">{new Date().toLocaleString()}</Typography>
-                        
+                        <Typography className={styles.dateTime} color="textSecondary">{new Date().toLocaleString()}</Typography>                       
                     </CardContent>
-                </Grid>
+              </Grid>
           </div>
       );
   }

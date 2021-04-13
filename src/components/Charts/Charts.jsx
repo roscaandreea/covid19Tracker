@@ -21,15 +21,24 @@ const Charts = ({data: {confirmed,recovered,deaths}, country }) =>{
                     data: dailyData.map(({ confirmed }) => confirmed),
                     label: 'Infected',
                     borderColor: '#3333ff',
-                    fill: true
+                    fill: true,
                 }, {
                     data: dailyData.map(({ deaths }) => deaths),
                     label: 'Deaths',
                     borderColor: '#ff3333',
                     backgroundColor: 'rgba(255,0,0,0.6)',
-                    fill: true
+                    fill: true,         
                 }]
-            }} 
+            }}
+            options= {{
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                          }
+                    }]
+                }
+            }}
         />) : null
     );
     const barChart = (
@@ -46,7 +55,14 @@ const Charts = ({data: {confirmed,recovered,deaths}, country }) =>{
                 }}
                 options={{
                     legend: {display: false},
-                    title: {display: true, text:`Current state in ${country}`}
+                    title: {display: true, text:`Current state in ${country}`},
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                display: false
+                              }
+                        }]
+                    }
                 }}
              />
         ) : null
