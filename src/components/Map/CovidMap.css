@@ -1,7 +1,7 @@
 .leaflet-container{
     background-color: rgb(163, 206, 255);
     height: 60vh;
-    width: 80vh;
+    width: 90vh;
     display: flex;
     justify-content: left; 
     align-items: left;

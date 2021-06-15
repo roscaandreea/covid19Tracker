@@ -3,9 +3,11 @@ import Loading from './Loading';
 import CovidMap from './CovidMap';
 import Legend from './Legend';
 import LoadCountries from '../../tasks/LoadCountries';
+import legendItems from '../../entities/LegendItems';
 
 const Map = () => {
     const [countries, setCountries] = useState([]);
+    const legendItemsInReverse= [...legendItems].reverse();
     const load = () => {
         console.log("load");
         const loadCountries = new LoadCountries();
@@ -20,7 +22,7 @@ const Map = () => {
              ) : ( 
              <div>
                  <CovidMap countries={countries} />
-                 <Legend />
+                 <Legend legendItems={legendItemsInReverse}/>
              </div> 
             )}
         </div>
