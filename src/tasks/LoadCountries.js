@@ -1,8 +1,8 @@
-import countries from '../data/countries.json';
+import { features } from '../data/countries.json';
 
 class LoadCountries{
     load =(setState) =>{
-        setState()
+        setState(features);
     }
 }
 
