@@ -5,19 +5,21 @@ import Legend from './Legend';
 import LoadCountries from '../../tasks/LoadCountries';
 
 const Map = () => {
-    const [ countries, setCountries ]= useState([]);
-    const load = () =>{
-        const loadCountries= new LoadCountries();
-        loadCountries.load(setCountries);
-    };
-    useEffect(load,[]);
+    const [countries, setCountries] = useState([]);
+    const load = () => {
+        console.log("load");
+        const loadCountries = new LoadCountries();
+        loadCountries.load((countries) => setCountries(countries));
+      };
+    
+      useEffect(load, []);
     return(
         <div>
-            { countries.length === 0 ? (
+            {countries.length === 0 ? (
             <Loading />
              ) : ( 
              <div>
-                 <CovidMap />
+                 <CovidMap countries={countries} />
                  <Legend />
              </div> 
             )}
