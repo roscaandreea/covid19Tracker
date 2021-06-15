@@ -1,9 +1,10 @@
 import React from 'react';
-import { Cards, Charts, CountryPicker } from './components';
+import { Cards, Charts, CountryPicker} from './components';
+import Map from './components/Map/Map';
 import { fetchData } from './api';
 import styles from './App.module.css';
 import covidImage from './images/image.png';
-import  {Card, CardContent, Typography, Grid } from '@material-ui/core';
+import  {CardContent, Typography, Grid } from '@material-ui/core';
 
 
 class App extends React.Component{
@@ -34,6 +35,7 @@ class App extends React.Component{
                 <h1 className={styles.title}>current status</h1>
               <Cards data={data}/>
               <CountryPicker handleCountryChange={ this.handleCountryChange }/>
+              <Map />
               <Charts data={ data } country={ country } />
               <Grid item  xs={12} className={styles.card}>
                     <CardContent>
