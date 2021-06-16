@@ -35,7 +35,9 @@ class App extends React.Component{
                 <h1 className={styles.title}>current status</h1>
               <Cards data={data}/>
               <CountryPicker handleCountryChange={ this.handleCountryChange }/>
+              <div className={styles.map}>
               <Map />
+              </div>
               <Charts data={ data } country={ country } />
               <Grid item  xs={12} className={styles.card}>
                     <CardContent>

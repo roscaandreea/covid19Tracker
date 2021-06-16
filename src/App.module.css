@@ -29,6 +29,12 @@ body{
     margin-top: 70px !important;
 }
 
+.map{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 3px !important;
+}
 
 @media (max-width: 770px){
     .container{
