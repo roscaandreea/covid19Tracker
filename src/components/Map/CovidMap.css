@@ -1,5 +1,7 @@
 .leaflet-container{
     background-color: rgb(163, 206, 255);
-    height: 50vh;
-    width: 70vh;
+    height: 70vh;
+    width: 100vh;
+    margin-top: 50px;
+    margin-left: 25px;
 }

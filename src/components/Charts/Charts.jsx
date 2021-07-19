@@ -31,6 +31,7 @@ const Charts = ({data: {confirmed,recovered,deaths}, country }) =>{
                 }]
             }}
             options= {{
+                title: {display: true, text:`Worldwide new cases confirmed vs deaths`},
                 scales: {
                     xAxes: [{
                         gridLines: {

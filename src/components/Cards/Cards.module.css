@@ -1,11 +1,14 @@
 .container{
-    margin: 50px,0;
+    margin: 5px,0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 25px;
 }
 
 .card{
     margin:0 2% !important;
-    margin-top: 20px !important;
-    width: 300px;
+    margin-top: 50px !important;
 }
 
 .infected{
@@ -21,7 +24,7 @@
 }
 
 .itemCard{
-    font-size: 25px !important;
+    font-size: 20px !important;
     font-weight: bold !important;
     text-align: center;
 }

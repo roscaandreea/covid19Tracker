@@ -7,7 +7,7 @@ import "./CovidMap.css";
 const CovidMap = ({countries}) => {
   const mapStyle = {
     fillColor: "white",
-    weight: 0.5,
+    weight: 0.3,
     color: "black",
     fillOpacity: 1,
   };
@@ -21,7 +21,7 @@ const CovidMap = ({countries}) => {
   
     return(
         <div>
-            <Map zoom={1} center={[40,10]}>
+            <Map zoom={1} center={[40,-10]}>
                 <GeoJSON 
                     data={countries}
                     style={mapStyle}

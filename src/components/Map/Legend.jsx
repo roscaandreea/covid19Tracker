@@ -9,14 +9,14 @@ const Legend = ({ legendItems }) => {
           key={item.title}
           style={{
             backgroundColor: item.color,
-            flex: 1,
+            flex: "1 1 auto",
             display: "flex",
             alignItems: "center", // vertical
             justifyContent: "center", // horiztontal
             color: item.textColor != null ? item.textColor : "black",
             fontWeight: "bolder",
             fontSize: "0.70rem",
-            height: "7vh",
+            height: "6vh",
           }}
         >
           <span>{item.title}</span>

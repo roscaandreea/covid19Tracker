@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cards, Charts, CountryPicker} from './components';
 import Map from './components/Map/Map';
+import Table from './components/Table/Table';
 import { fetchData } from './api';
 import styles from './App.module.css';
 import covidImage from './images/image.png';
@@ -31,14 +32,25 @@ class App extends React.Component{
       const country = this.state.country;
       return(
           <div className={styles.container}>
-              <img className={styles.image} src={covidImage} alt="covid-19" />
-                <h1 className={styles.title}>current status</h1>
+                    <div className={styles.item}>
+                    <img className={styles.image} src={covidImage} alt="covid-19" />
+                    
+                    <CountryPicker handleCountryChange={ this.handleCountryChange }/>
+                    </div>
+                    <h2 className={styles.title}>current status</h2>
+              <div className={styles.item}>
               <Cards data={data}/>
-              <CountryPicker handleCountryChange={ this.handleCountryChange }/>
-              <div className={styles.map}>
-              <Map />
-              </div>
               <Charts data={ data } country={ country } />
+              </div>
+              <div className={styles.itemCard}>
+                <div className={styles.map}>
+                    <Map />
+                </div>
+                <div className={styles.itemChart}>
+                    <h4 className={styles.titleCase}>Live Cases By Country</h4>
+                    <Table country={ country } data={ data} />
+                </div>
+              </div>
               <Grid item  xs={12} className={styles.card}>
                     <CardContent>
                         <Typography className={styles.textDate} varian="body2">Last Updated at:</Typography>
