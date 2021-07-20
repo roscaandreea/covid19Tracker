@@ -55,11 +55,26 @@ body{
 
 .card{
     margin:0 2% !important;
-    margin-top: 70px !important;
+    margin-top: 20px !important;
 }
 
 .map{
     position: relative;  
+}
+
+.doughnut{
+    margin-left: 900px;
+    margin-top: 10px;
+    position: absolute;
+    color: #6a5d5d;
+    height:150px;
+    width: 250px;
+ 
+}
+
+.titleDought{
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 770px){

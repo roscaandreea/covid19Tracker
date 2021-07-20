@@ -15,10 +15,10 @@ const Table = ({data: {confirmed}, country}) =>{
 
     return (
         <div className={styles.table}>
-            {fetchedCountries.map((country,confirmed) =>(
+            {fetchedCountries.map((country) =>(
                 <tr>
                     <td>{country}</td>
-                    <td><strong>{confirmed}</strong></td>
+                    <td><strong>{confirmed.value}</strong></td>
                 </tr>
             ))}
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Cards, Charts, CountryPicker} from './components';
+import Charts2 from './components/Charts/Charts2';
 import Map from './components/Map/Map';
 import Table from './components/Table/Table';
 import { fetchData } from './api';
@@ -38,6 +39,10 @@ class App extends React.Component{
                     <CountryPicker handleCountryChange={ this.handleCountryChange }/>
                     </div>
                     <h2 className={styles.title}>current status</h2>
+                    < div className={styles.doughnut}>
+                        <h6 className={styles.titleDought}>Recovered vs deaths</h6>
+                        <Charts2 data={data} />
+                    </div>
               <div className={styles.item}>
               <Cards data={data}/>
               <Charts data={ data } country={ country } />
