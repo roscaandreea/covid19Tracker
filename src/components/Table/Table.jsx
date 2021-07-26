@@ -12,7 +12,8 @@ const Table = ({data: {confirmed}, country}) =>{
         }
         fetchAPI();
     },[setFetchedCountries,setFetchedData]);
-
+     const confirmedValue = fetchedData.map(({confirmed}) =>confirmed.value);
+     console.log(confirmedValue);
     return (
         <div className={styles.table}>
             {fetchedCountries.map((country) =>(

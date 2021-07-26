@@ -52,7 +52,7 @@ class App extends React.Component{
                     <Map />
                 </div>
                 <div className={styles.itemChart}>
-                    <h4 className={styles.titleCase}>Live Cases By Country</h4>
+                    <h4 className={styles.titleCase}>Confirmed Cases By Country</h4>
                     <Table country={ country } data={ data} />
                 </div>
               </div>
