@@ -40,13 +40,12 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) =>{
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.recovered)}>
                     <CardContent>
                     <HtmlTooltip
-        title={
-          <React.Fragment>
-            <Typography color="inherit">Server Error</Typography>
-            <em>{"Missing data from"}</em> <u>{'API.'}</u>
-          </React.Fragment>
-        }
-       placement="top" enterDelay={500} leaveDelay={200}>
+                            title={
+                                <React.Fragment>
+                                <Typography color="inherit">Server Error</Typography>
+                                         <em>{"Missing data from"}</em> <u>{'API.'}</u>
+                               </React.Fragment>
+                             } placement="top" enterDelay={500} leaveDelay={200}>
                         <Alert className={styles.error} severity="error"></Alert>
                         </HtmlTooltip>
                         <Typography color="textSecondary" gutterBottom className={styles.itemCard}>Recovered: </Typography>

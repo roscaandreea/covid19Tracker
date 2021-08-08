@@ -6,6 +6,13 @@
     margin-top: 40px;
 }
 
+.error{
+    position: absolute;
+    top: 55px;
+    right: -50px;
+    background-color: transparent !important;
+}
+
 @media (max-width: 770px){
     .container{
         width: 100%;

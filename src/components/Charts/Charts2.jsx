@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import  {Card, CardContent, Typography, Grid,Tooltip } from '@material-ui/core';
+import Alert from '@material-ui/lab/Alert';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import {fetchDailyData} from '../../api';
 import { Doughnut } from 'react-chartjs-2';
 import styles from './Charts.module.css';
@@ -13,7 +16,7 @@ const Charts2 = ({data: {recovered,deaths}}) =>{
         fetchApi();
     },[]);
     const labels = ["Recovered", "Deaths"];
-    const recoverData = recovered.value === 0 ? 'Unexpected 0 value at recovered casses' : recovered.value;
+    const recoverData = recovered.value;
     const deathsData = deaths.value;
     const doughnutLine =(
          <Doughnut
@@ -36,9 +39,27 @@ const Charts2 = ({data: {recovered,deaths}}) =>{
                   }}
     />
     );
+    const HtmlTooltip = withStyles((theme) => ({
+        tooltip: {
+          backgroundColor: '#f5f5f9',
+          color: 'rgba(0, 0, 0, 0.87)',
+          maxWidth: 220,
+          fontSize: theme.typography.pxToRem(12),
+          border: '1px solid #dadde9',
+        },
+      }))(Tooltip);
     return(
         <div>
             { doughnutLine}
+            <HtmlTooltip
+                            title={
+                                <React.Fragment>
+                                <Typography color="inherit">Server Error</Typography>
+                                         <em>{"Missing data from"}</em> <u>{'API.'}</u>
+                               </React.Fragment>
+                             } placement="top" enterDelay={500} leaveDelay={200}>
+                        <Alert className={styles.error} severity="error"></Alert>
+                        </HtmlTooltip>
         </div>
     );
 }
