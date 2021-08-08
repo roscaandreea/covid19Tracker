@@ -17,8 +17,9 @@ export const fetchData = async(country) => {
         };
         return modifiedData;
 
-    } catch(err) {
-        console.log(err);
+    } catch(e) {
+        console.log(e);
+        
     }
 }
 

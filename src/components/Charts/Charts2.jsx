@@ -13,9 +13,8 @@ const Charts2 = ({data: {recovered,deaths}}) =>{
         fetchApi();
     },[]);
     const labels = ["Recovered", "Deaths"];
-    const recoverData = recovered.value;
+    const recoverData = recovered.value === 0 ? 'Unexpected 0 value at recovered casses' : recovered.value;
     const deathsData = deaths.value;
-    console.log(recoverData);
     const doughnutLine =(
          <Doughnut
                 data ={{

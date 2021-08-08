@@ -62,6 +62,12 @@
 .textContent{
     text-align: center !important;
 }
+.container .error{
+    position: absolute;
+    top: 193px;
+    right: 865px;
+    background-color: transparent !important;
+}
 
 
 @media (max-width: 770px){
